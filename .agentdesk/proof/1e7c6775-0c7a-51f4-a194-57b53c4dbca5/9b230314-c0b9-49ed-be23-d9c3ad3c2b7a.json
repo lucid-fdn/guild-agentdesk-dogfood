@@ -1,0 +1,26 @@
+{
+  "schema_version": "v1alpha1",
+  "artifact_id": "9b230314-c0b9-49ed-be23-d9c3ad3c2b7a",
+  "taskpack_id": "1e7c6775-0c7a-51f4-a194-57b53c4dbca5",
+  "kind": "changed_files",
+  "title": "changed-files.json",
+  "summary": "Proof artifact published from local agentdesk workflow.",
+  "producer": {
+    "actor_id": "dd177790-5625-474f-ba31-ac20957062c6",
+    "actor_type": "agent",
+    "display_name": "agentdesk-cli",
+    "orchestrator": "agentdesk"
+  },
+  "storage": {
+    "uri": "file:///private/var/folders/mf/gfhyg40936ddyrw75kw7kv4m0000gn/T/tmp.N0fLpbON8T/dogfood/changed-files.json",
+    "mime_type": "application/json",
+    "sha256": "cc81d38a0fa281b28d6a6080746ebb135dc5e5bf4e1d8a403d6617bcef36ab25",
+    "size_bytes": 427
+  },
+  "labels": [
+    "agentdesk",
+    "proof"
+  ],
+  "version": 1,
+  "created_at": "2026-04-25T12:07:10.213Z"
+}

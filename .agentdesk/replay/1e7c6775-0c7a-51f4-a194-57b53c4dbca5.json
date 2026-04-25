@@ -1,0 +1,218 @@
+{
+  "schema_version": "v1alpha1",
+  "root_taskpack_id": "1e7c6775-0c7a-51f4-a194-57b53c4dbca5",
+  "taskpack": {
+    "schema_version": "v1alpha1",
+    "taskpack_id": "1e7c6775-0c7a-51f4-a194-57b53c4dbca5",
+    "title": "Prove TS AgentDesk public loop",
+    "objective": "Prove TS AgentDesk public loop\n\nSource issue:\n## Objective\nProve TS AgentDesk public loop\n\n## Allowed scope\ndocs/**,.agentdesk/**,README.md\n\n## Acceptance criteria\n- TypeScript AgentDesk creates and claims the mandate.\\nProof artifacts are attached.\\nReplay is exported.\\nAgent Work Contract report appears on the PR.\n\n## Notes for the agent\nUse the TypeScript-first guild-agentdesk CLI from lucid-fdn/guild, not the legacy Go CLI.",
+    "task_type": "implementation",
+    "priority": "medium",
+    "requested_by": {
+      "actor_id": "ab13ba29-353b-4b7e-a7aa-f31661f778f8",
+      "actor_type": "human",
+      "display_name": "daishizenSensei",
+      "orchestrator": "github",
+      "endpoint": "https://github.com/lucid-fdn/guild-agentdesk-dogfood"
+    },
+    "role_hint": "builder",
+    "references": [
+      "https://github.com/lucid-fdn/guild-agentdesk-dogfood/issues/3"
+    ],
+    "labels": [
+      "agentdesk",
+      "github",
+      "issue-3",
+      "agent-ready",
+      "priority-p2"
+    ],
+    "context_budget": {
+      "max_input_tokens": 12000,
+      "max_output_tokens": 1024,
+      "context_strategy": "artifact_refs_first"
+    },
+    "permissions": {
+      "allow_network": false,
+      "allow_shell": true,
+      "allow_external_write": false,
+      "approval_mode": "ask",
+      "scopes": [
+        "src/**",
+        "tests/**",
+        "docs/**"
+      ]
+    },
+    "acceptance_criteria": [
+      {
+        "criterion_id": "criterion_01",
+        "description": "Tests pass or failure is explained.",
+        "required": true
+      },
+      {
+        "criterion_id": "criterion_02",
+        "description": "Every modified file is listed.",
+        "required": true
+      },
+      {
+        "criterion_id": "criterion_03",
+        "description": "A proof artifact is attached.",
+        "required": true
+      },
+      {
+        "criterion_id": "criterion_04",
+        "description": "A reviewer handoff is created.",
+        "required": true
+      }
+    ],
+    "created_at": "2026-04-25T12:00:21Z"
+  },
+  "taskpacks": [
+    {
+      "schema_version": "v1alpha1",
+      "taskpack_id": "1e7c6775-0c7a-51f4-a194-57b53c4dbca5",
+      "title": "Prove TS AgentDesk public loop",
+      "objective": "Prove TS AgentDesk public loop\n\nSource issue:\n## Objective\nProve TS AgentDesk public loop\n\n## Allowed scope\ndocs/**,.agentdesk/**,README.md\n\n## Acceptance criteria\n- TypeScript AgentDesk creates and claims the mandate.\\nProof artifacts are attached.\\nReplay is exported.\\nAgent Work Contract report appears on the PR.\n\n## Notes for the agent\nUse the TypeScript-first guild-agentdesk CLI from lucid-fdn/guild, not the legacy Go CLI.",
+      "task_type": "implementation",
+      "priority": "medium",
+      "requested_by": {
+        "actor_id": "ab13ba29-353b-4b7e-a7aa-f31661f778f8",
+        "actor_type": "human",
+        "display_name": "daishizenSensei",
+        "orchestrator": "github",
+        "endpoint": "https://github.com/lucid-fdn/guild-agentdesk-dogfood"
+      },
+      "role_hint": "builder",
+      "references": [
+        "https://github.com/lucid-fdn/guild-agentdesk-dogfood/issues/3"
+      ],
+      "labels": [
+        "agentdesk",
+        "github",
+        "issue-3",
+        "agent-ready",
+        "priority-p2"
+      ],
+      "context_budget": {
+        "max_input_tokens": 12000,
+        "max_output_tokens": 1024,
+        "context_strategy": "artifact_refs_first"
+      },
+      "permissions": {
+        "allow_network": false,
+        "allow_shell": true,
+        "allow_external_write": false,
+        "approval_mode": "ask",
+        "scopes": [
+          "src/**",
+          "tests/**",
+          "docs/**"
+        ]
+      },
+      "acceptance_criteria": [
+        {
+          "criterion_id": "criterion_01",
+          "description": "Tests pass or failure is explained.",
+          "required": true
+        },
+        {
+          "criterion_id": "criterion_02",
+          "description": "Every modified file is listed.",
+          "required": true
+        },
+        {
+          "criterion_id": "criterion_03",
+          "description": "A proof artifact is attached.",
+          "required": true
+        },
+        {
+          "criterion_id": "criterion_04",
+          "description": "A reviewer handoff is created.",
+          "required": true
+        }
+      ],
+      "created_at": "2026-04-25T12:00:21Z"
+    }
+  ],
+  "dri_bindings": [],
+  "artifacts": [
+    {
+      "schema_version": "v1alpha1",
+      "artifact_id": "c7e64daf-89a8-438b-b824-e2a70d6cf4c5",
+      "taskpack_id": "1e7c6775-0c7a-51f4-a194-57b53c4dbca5",
+      "kind": "test_report",
+      "title": "test-results.xml",
+      "summary": "Proof artifact published from local agentdesk workflow.",
+      "producer": {
+        "actor_id": "e1b43623-8d3c-483d-b2f8-c70307a09088",
+        "actor_type": "agent",
+        "display_name": "agentdesk-cli",
+        "orchestrator": "agentdesk"
+      },
+      "storage": {
+        "uri": "file:///private/var/folders/mf/gfhyg40936ddyrw75kw7kv4m0000gn/T/tmp.N0fLpbON8T/dogfood/test-results.xml",
+        "mime_type": "application/xml",
+        "sha256": "33ec1dc01bbeec4618de03371fe2ebe14a7327a88f76b69f56f61641959cd784",
+        "size_bytes": 146
+      },
+      "labels": [
+        "agentdesk",
+        "proof"
+      ],
+      "version": 1,
+      "created_at": "2026-04-25T12:07:10.120Z"
+    },
+    {
+      "schema_version": "v1alpha1",
+      "artifact_id": "9b230314-c0b9-49ed-be23-d9c3ad3c2b7a",
+      "taskpack_id": "1e7c6775-0c7a-51f4-a194-57b53c4dbca5",
+      "kind": "changed_files",
+      "title": "changed-files.json",
+      "summary": "Proof artifact published from local agentdesk workflow.",
+      "producer": {
+        "actor_id": "dd177790-5625-474f-ba31-ac20957062c6",
+        "actor_type": "agent",
+        "display_name": "agentdesk-cli",
+        "orchestrator": "agentdesk"
+      },
+      "storage": {
+        "uri": "file:///private/var/folders/mf/gfhyg40936ddyrw75kw7kv4m0000gn/T/tmp.N0fLpbON8T/dogfood/changed-files.json",
+        "mime_type": "application/json",
+        "sha256": "cc81d38a0fa281b28d6a6080746ebb135dc5e5bf4e1d8a403d6617bcef36ab25",
+        "size_bytes": 427
+      },
+      "labels": [
+        "agentdesk",
+        "proof"
+      ],
+      "version": 1,
+      "created_at": "2026-04-25T12:07:10.213Z"
+    },
+    {
+      "schema_version": "v1alpha1",
+      "artifact_id": "3aa493cf-2479-4078-90cf-6691e00ce2e7",
+      "taskpack_id": "1e7c6775-0c7a-51f4-a194-57b53c4dbca5",
+      "kind": "handoff_summary",
+      "title": "3aa493cf-2479-4078-90cf-6691e00ce2e7.md",
+      "summary": "Handoff to reviewer: Ready for review: TypeScript-first AgentDesk loop completed from a clean external repo.",
+      "producer": {
+        "actor_id": "15481f84-1749-46b3-baf7-90eace4e6771",
+        "actor_type": "agent",
+        "display_name": "agentdesk-cli",
+        "orchestrator": "agentdesk"
+      },
+      "storage": {
+        "uri": "file:///private/var/folders/mf/gfhyg40936ddyrw75kw7kv4m0000gn/T/tmp.N0fLpbON8T/dogfood/.agentdesk/handoffs/1e7c6775-0c7a-51f4-a194-57b53c4dbca5/3aa493cf-2479-4078-90cf-6691e00ce2e7.md",
+        "mime_type": "text/markdown",
+        "sha256": "936fb02778b708bb9d4c8f50e29f6dd0c8c16565bf1e602e0bfd6c11e7c47bb0",
+        "size_bytes": 193
+      },
+      "labels": [
+        "agentdesk",
+        "proof"
+      ],
+      "version": 1,
+      "created_at": "2026-04-25T12:07:10.301Z"
+    }
+  ],
+  "promotion_records": []
+}
