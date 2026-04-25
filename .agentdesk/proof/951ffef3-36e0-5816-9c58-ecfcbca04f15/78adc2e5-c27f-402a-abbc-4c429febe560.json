@@ -1,0 +1,26 @@
+{
+  "schema_version": "v1alpha1",
+  "artifact_id": "78adc2e5-c27f-402a-abbc-4c429febe560",
+  "taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+  "kind": "handoff_summary",
+  "title": "78adc2e5-c27f-402a-abbc-4c429febe560.md",
+  "summary": "Handoff to reviewer: Ready for review: public alpha dogfood loop completed from clean external repo.",
+  "producer": {
+    "actor_id": "68e0532e-43d0-43c4-9781-b248f0a414d1",
+    "actor_type": "agent",
+    "display_name": "agentdesk-cli",
+    "orchestrator": "agentdesk"
+  },
+  "storage": {
+    "uri": "file:///Users/quentinbrosseau/Documents/Codex/2026-04-24-you-re-an-expert-in-ai/guild-agentdesk-dogfood/.agentdesk/handoffs/951ffef3-36e0-5816-9c58-ecfcbca04f15/78adc2e5-c27f-402a-abbc-4c429febe560.md",
+    "mime_type": "text/markdown",
+    "sha256": "8e0bcea726462479eead4fc66c2ca098cc1f4b0733e465d2b778810783055ae9",
+    "size_bytes": 181
+  },
+  "labels": [
+    "agentdesk",
+    "proof"
+  ],
+  "version": 1,
+  "created_at": "2026-04-25T09:41:23Z"
+}

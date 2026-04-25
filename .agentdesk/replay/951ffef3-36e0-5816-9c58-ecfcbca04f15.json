@@ -1,0 +1,218 @@
+{
+  "schema_version": "v1alpha1",
+  "root_taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+  "taskpack": {
+    "schema_version": "v1alpha1",
+    "taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+    "title": "[agent] Prove AgentDesk public alpha loop",
+    "objective": "[agent] Prove AgentDesk public alpha loop\n\nSource issue:\n## Objective\nCreate a tiny proof artifact showing the Guild AgentDesk alpha works from a clean external repo.\n\n## Allowed scope\nREADME.md, docs/**, .agentdesk/**\n\n## Acceptance criteria\n- A mandate is created from this GitHub issue.\n- The mandate is claimed by an agent.\n- Proof artifacts include test_report, changed_files, and handoff_summary.\n- AgentDesk verify passes.\n- A replay bundle is exported and committed.\n\n## Notes for the agent\nKeep the change intentionally tiny so the demo focuses on the workflow, not code complexity.",
+    "task_type": "implementation",
+    "priority": "medium",
+    "requested_by": {
+      "actor_id": "54b645e4-a804-5b97-b354-51d07bf81819",
+      "actor_type": "human",
+      "display_name": "daishizenSensei",
+      "orchestrator": "github",
+      "endpoint": "https://github.com/lucid-fdn/guild-agentdesk-dogfood"
+    },
+    "role_hint": "builder",
+    "references": [
+      "https://github.com/lucid-fdn/guild-agentdesk-dogfood/issues/1"
+    ],
+    "labels": [
+      "agentdesk",
+      "github",
+      "issue-1",
+      "agent-ready",
+      "priority-p2"
+    ],
+    "context_budget": {
+      "max_input_tokens": 12000,
+      "max_output_tokens": 1024,
+      "context_strategy": "artifact_refs_first"
+    },
+    "permissions": {
+      "allow_network": false,
+      "allow_shell": true,
+      "allow_external_write": false,
+      "approval_mode": "ask",
+      "scopes": [
+        "src/**",
+        "tests/**",
+        "docs/**"
+      ]
+    },
+    "acceptance_criteria": [
+      {
+        "criterion_id": "criterion_01",
+        "description": "Tests pass or failure is explained.",
+        "required": true
+      },
+      {
+        "criterion_id": "criterion_02",
+        "description": "Every modified file is listed.",
+        "required": true
+      },
+      {
+        "criterion_id": "criterion_03",
+        "description": "A proof artifact is attached.",
+        "required": true
+      },
+      {
+        "criterion_id": "criterion_04",
+        "description": "A reviewer handoff is created.",
+        "required": true
+      }
+    ],
+    "created_at": "2026-04-25T09:40:32Z"
+  },
+  "taskpacks": [
+    {
+      "schema_version": "v1alpha1",
+      "taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+      "title": "[agent] Prove AgentDesk public alpha loop",
+      "objective": "[agent] Prove AgentDesk public alpha loop\n\nSource issue:\n## Objective\nCreate a tiny proof artifact showing the Guild AgentDesk alpha works from a clean external repo.\n\n## Allowed scope\nREADME.md, docs/**, .agentdesk/**\n\n## Acceptance criteria\n- A mandate is created from this GitHub issue.\n- The mandate is claimed by an agent.\n- Proof artifacts include test_report, changed_files, and handoff_summary.\n- AgentDesk verify passes.\n- A replay bundle is exported and committed.\n\n## Notes for the agent\nKeep the change intentionally tiny so the demo focuses on the workflow, not code complexity.",
+      "task_type": "implementation",
+      "priority": "medium",
+      "requested_by": {
+        "actor_id": "54b645e4-a804-5b97-b354-51d07bf81819",
+        "actor_type": "human",
+        "display_name": "daishizenSensei",
+        "orchestrator": "github",
+        "endpoint": "https://github.com/lucid-fdn/guild-agentdesk-dogfood"
+      },
+      "role_hint": "builder",
+      "references": [
+        "https://github.com/lucid-fdn/guild-agentdesk-dogfood/issues/1"
+      ],
+      "labels": [
+        "agentdesk",
+        "github",
+        "issue-1",
+        "agent-ready",
+        "priority-p2"
+      ],
+      "context_budget": {
+        "max_input_tokens": 12000,
+        "max_output_tokens": 1024,
+        "context_strategy": "artifact_refs_first"
+      },
+      "permissions": {
+        "allow_network": false,
+        "allow_shell": true,
+        "allow_external_write": false,
+        "approval_mode": "ask",
+        "scopes": [
+          "src/**",
+          "tests/**",
+          "docs/**"
+        ]
+      },
+      "acceptance_criteria": [
+        {
+          "criterion_id": "criterion_01",
+          "description": "Tests pass or failure is explained.",
+          "required": true
+        },
+        {
+          "criterion_id": "criterion_02",
+          "description": "Every modified file is listed.",
+          "required": true
+        },
+        {
+          "criterion_id": "criterion_03",
+          "description": "A proof artifact is attached.",
+          "required": true
+        },
+        {
+          "criterion_id": "criterion_04",
+          "description": "A reviewer handoff is created.",
+          "required": true
+        }
+      ],
+      "created_at": "2026-04-25T09:40:32Z"
+    }
+  ],
+  "dri_bindings": [],
+  "artifacts": [
+    {
+      "schema_version": "v1alpha1",
+      "artifact_id": "678682d4-1c8d-4a39-99cb-d0a39ecc3680",
+      "taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+      "kind": "changed_files",
+      "title": "changed-files.json",
+      "summary": "Changed files recorded for the dogfood PR.",
+      "producer": {
+        "actor_id": "9e0902c7-336f-4cec-8b44-00600b57d579",
+        "actor_type": "agent",
+        "display_name": "agentdesk-cli",
+        "orchestrator": "agentdesk"
+      },
+      "storage": {
+        "uri": "file:///Users/quentinbrosseau/Documents/Codex/2026-04-24-you-re-an-expert-in-ai/guild-agentdesk-dogfood/changed-files.json",
+        "mime_type": "application/json",
+        "sha256": "665d813451b8ab3b12737b31dd568fdedb77c490acc2f755afabda298245a8d8",
+        "size_bytes": 162
+      },
+      "labels": [
+        "agentdesk",
+        "proof"
+      ],
+      "version": 1,
+      "created_at": "2026-04-25T09:41:23Z"
+    },
+    {
+      "schema_version": "v1alpha1",
+      "artifact_id": "705bee15-1363-4e56-9ae3-b45e18cd2266",
+      "taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+      "kind": "test_report",
+      "title": "test-results.xml",
+      "summary": "Dogfood smoke test passed.",
+      "producer": {
+        "actor_id": "652405fe-9a53-4e32-9e06-da036ce7e19e",
+        "actor_type": "agent",
+        "display_name": "agentdesk-cli",
+        "orchestrator": "agentdesk"
+      },
+      "storage": {
+        "uri": "file:///Users/quentinbrosseau/Documents/Codex/2026-04-24-you-re-an-expert-in-ai/guild-agentdesk-dogfood/test-results.xml",
+        "mime_type": "application/xml",
+        "sha256": "ab6dc38f0865b7ea36aa29b623199745269cb13867583f2cff19fe9090b7b7c5",
+        "size_bytes": 138
+      },
+      "labels": [
+        "agentdesk",
+        "proof"
+      ],
+      "version": 1,
+      "created_at": "2026-04-25T09:41:23Z"
+    },
+    {
+      "schema_version": "v1alpha1",
+      "artifact_id": "78adc2e5-c27f-402a-abbc-4c429febe560",
+      "taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+      "kind": "handoff_summary",
+      "title": "78adc2e5-c27f-402a-abbc-4c429febe560.md",
+      "summary": "Handoff to reviewer: Ready for review: public alpha dogfood loop completed from clean external repo.",
+      "producer": {
+        "actor_id": "68e0532e-43d0-43c4-9781-b248f0a414d1",
+        "actor_type": "agent",
+        "display_name": "agentdesk-cli",
+        "orchestrator": "agentdesk"
+      },
+      "storage": {
+        "uri": "file:///Users/quentinbrosseau/Documents/Codex/2026-04-24-you-re-an-expert-in-ai/guild-agentdesk-dogfood/.agentdesk/handoffs/951ffef3-36e0-5816-9c58-ecfcbca04f15/78adc2e5-c27f-402a-abbc-4c429febe560.md",
+        "mime_type": "text/markdown",
+        "sha256": "8e0bcea726462479eead4fc66c2ca098cc1f4b0733e465d2b778810783055ae9",
+        "size_bytes": 181
+      },
+      "labels": [
+        "agentdesk",
+        "proof"
+      ],
+      "version": 1,
+      "created_at": "2026-04-25T09:41:23Z"
+    }
+  ],
+  "promotion_records": []
+}

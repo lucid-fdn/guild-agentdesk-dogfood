@@ -1,0 +1,65 @@
+{
+  "schema_version": "v1alpha1",
+  "taskpack_id": "951ffef3-36e0-5816-9c58-ecfcbca04f15",
+  "title": "[agent] Prove AgentDesk public alpha loop",
+  "objective": "[agent] Prove AgentDesk public alpha loop\n\nSource issue:\n## Objective\nCreate a tiny proof artifact showing the Guild AgentDesk alpha works from a clean external repo.\n\n## Allowed scope\nREADME.md, docs/**, .agentdesk/**\n\n## Acceptance criteria\n- A mandate is created from this GitHub issue.\n- The mandate is claimed by an agent.\n- Proof artifacts include test_report, changed_files, and handoff_summary.\n- AgentDesk verify passes.\n- A replay bundle is exported and committed.\n\n## Notes for the agent\nKeep the change intentionally tiny so the demo focuses on the workflow, not code complexity.",
+  "task_type": "implementation",
+  "priority": "medium",
+  "requested_by": {
+    "actor_id": "54b645e4-a804-5b97-b354-51d07bf81819",
+    "actor_type": "human",
+    "display_name": "daishizenSensei",
+    "orchestrator": "github",
+    "endpoint": "https://github.com/lucid-fdn/guild-agentdesk-dogfood"
+  },
+  "role_hint": "builder",
+  "references": [
+    "https://github.com/lucid-fdn/guild-agentdesk-dogfood/issues/1"
+  ],
+  "labels": [
+    "agentdesk",
+    "github",
+    "issue-1",
+    "agent-ready",
+    "priority-p2"
+  ],
+  "context_budget": {
+    "max_input_tokens": 12000,
+    "max_output_tokens": 1024,
+    "context_strategy": "artifact_refs_first"
+  },
+  "permissions": {
+    "allow_network": false,
+    "allow_shell": true,
+    "allow_external_write": false,
+    "approval_mode": "ask",
+    "scopes": [
+      "src/**",
+      "tests/**",
+      "docs/**"
+    ]
+  },
+  "acceptance_criteria": [
+    {
+      "criterion_id": "criterion_01",
+      "description": "Tests pass or failure is explained.",
+      "required": true
+    },
+    {
+      "criterion_id": "criterion_02",
+      "description": "Every modified file is listed.",
+      "required": true
+    },
+    {
+      "criterion_id": "criterion_03",
+      "description": "A proof artifact is attached.",
+      "required": true
+    },
+    {
+      "criterion_id": "criterion_04",
+      "description": "A reviewer handoff is created.",
+      "required": true
+    }
+  ],
+  "created_at": "2026-04-25T09:40:32Z"
+}
