@@ -1,0 +1,27 @@
+name: AgentDesk Doctor
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "agentdesk.yaml"
+      - ".github/workflows/agentdesk-doctor.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  doctor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.23.0"
+      - name: Install Guild
+        run: go install github.com/lucid-fdn/guild/cli/cmd/guild@v0.1.0-alpha.2
+      - name: Run AgentDesk doctor
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: guild agentdesk doctor --repo "${GITHUB_REPOSITORY}"
