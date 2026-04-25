@@ -28,19 +28,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-node@v4
         with:
-          go-version: "1.23.0"
-      - name: Install Guild
-        run: go install github.com/lucid-fdn/guild/cli/cmd/guild@v0.1.0-alpha.2
+          node-version: 22
+      - name: Build TypeScript Guild AgentDesk
+        run: |
+          git clone --depth 1 https://github.com/lucid-fdn/guild.git /tmp/guild
+          corepack enable
+          corepack pnpm --dir /tmp/guild install --frozen-lockfile
+          corepack pnpm --dir /tmp/guild run build:agentdesk-ts
       - name: Resolve mandate
         id: mandate
         env:
           INPUT_MANDATE_ID: ${{ inputs.mandate_id }}
+          PR_BODY: ${{ github.event.pull_request.body }}
         run: |
           if [[ -n "${INPUT_MANDATE_ID}" ]]; then
             echo "mandate_id=${INPUT_MANDATE_ID}" >> "${GITHUB_OUTPUT}"
             exit 0
+          fi
+          if [[ -n "${PR_BODY}" ]]; then
+            mandate_id="$(printf '%s\n' "${PR_BODY}" | sed -n 's/^AgentDesk-Mandate: //p' | head -n 1)"
+            if [[ -n "${mandate_id}" ]]; then
+              echo "mandate_id=${mandate_id}" >> "${GITHUB_OUTPUT}"
+              exit 0
+            fi
           fi
           mandate_file="$(find .agentdesk/mandates -name '*.json' -type f | sort | head -n 1 || true)"
           if [[ -z "${mandate_file}" ]]; then
@@ -58,7 +70,7 @@ jobs:
             REPLAY_FILE=".agentdesk/replay/replay.json"
           fi
           mkdir -p "$(dirname "${REPLAY_FILE}")"
-          guild agentdesk replay export --id "${MANDATE_ID}" --file "${REPLAY_FILE}"
+          node /tmp/guild/packages/agentdesk-cli/dist/index.js replay export --id "${MANDATE_ID}" --file "${REPLAY_FILE}"
       - name: Verify agent work contract
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -68,7 +80,7 @@ jobs:
           if [[ -z "${REPLAY_FILE}" ]]; then
             REPLAY_FILE=".agentdesk/replay/replay.json"
           fi
-          guild agentdesk verify \
+          node /tmp/guild/packages/agentdesk-cli/dist/index.js verify \
             --id "${MANDATE_ID}" \
             --github-report \
             --replay-file "${REPLAY_FILE}"

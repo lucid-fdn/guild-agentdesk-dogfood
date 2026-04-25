@@ -1,10 +1,10 @@
 [
-  "docs/dogfood-proof.md",
-  ".agentdesk/mandates/951ffef3-36e0-5816-9c58-ecfcbca04f15.json",
-  ".agentdesk/claims/951ffef3-36e0-5816-9c58-ecfcbca04f15.json",
-  ".agentdesk/proof/951ffef3-36e0-5816-9c58-ecfcbca04f15/678682d4-1c8d-4a39-99cb-d0a39ecc3680.json",
-  ".agentdesk/proof/951ffef3-36e0-5816-9c58-ecfcbca04f15/705bee15-1363-4e56-9ae3-b45e18cd2266.json",
-  ".agentdesk/proof/951ffef3-36e0-5816-9c58-ecfcbca04f15/78adc2e5-c27f-402a-abbc-4c429febe560.json",
-  ".agentdesk/handoffs/951ffef3-36e0-5816-9c58-ecfcbca04f15/78adc2e5-c27f-402a-abbc-4c429febe560.md",
-  ".agentdesk/replay/951ffef3-36e0-5816-9c58-ecfcbca04f15.json"
+  "README.md",
+  "docs/ts-agentdesk-proof.md",
+  ".github/workflows/agent-work-contract.yml",
+  ".agentdesk/mandates/1e7c6775-0c7a-51f4-a194-57b53c4dbca5.json",
+  ".agentdesk/claims/1e7c6775-0c7a-51f4-a194-57b53c4dbca5.json",
+  ".agentdesk/proof/1e7c6775-0c7a-51f4-a194-57b53c4dbca5/*.json",
+  ".agentdesk/handoffs/1e7c6775-0c7a-51f4-a194-57b53c4dbca5/*.md",
+  ".agentdesk/replay/1e7c6775-0c7a-51f4-a194-57b53c4dbca5.json"
 ]

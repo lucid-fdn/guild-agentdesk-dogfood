@@ -11,3 +11,8 @@ The goal is to prove the public install path:
 - verify the Agent Work Contract
 - export replay
 - open a PR with the proof artifacts
+
+## Dogfood Runs
+
+- Issue #1 / PR #2 proved the original public alpha loop.
+- Issue #3 proves the TypeScript-first `guild-agentdesk` loop.
